@@ -34,7 +34,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     use:
-      - All            
+      - All        
+      
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
@@ -42,6 +43,7 @@ proxy-groups:
       - All  
     proxies:
       - DIRECT 
+      
   - name: NETFLIX
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
@@ -49,6 +51,7 @@ proxy-groups:
       - All
     proxies:  
       - DIRECT
+      
   - name: Disney+
     type: select
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
@@ -56,6 +59,7 @@ proxy-groups:
       - All
     proxies:
       - DIRECT
+      
   - name: PTT
     type: select
     icon: https://iamchucky.github.io/PttChrome/icon_512.png
@@ -71,9 +75,22 @@ proxy-groups:
       - All
     proxies:
       - DIRECT
+      
+  - name: Porn
+#    type: select
+#    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+#    type: select
+    icon: https://www.vhv.rs/dpng/d/523-5234025_18-plus-png-emblem-transparent-png.png
+    use:
+      - All
+#    proxies:
+#      - DIRECT
+
 
 rule-providers:
-
 
   Netflix:
     type: http
@@ -96,12 +113,19 @@ rule-providers:
     path: ./ruleset/Telegram.yaml
     interval: 86400
 
+  Porn:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/leo15dev/Stash/main/rule/porn.yaml"
+    path: ./ruleset/Porn.yaml
+    interval: 86400
 
 
 rules:
   - RULE-SET,Netflix,NETFLIX
   - RULE-SET,Disney,Disney+
   - RULE-SET,Telegram,Telegram
+  -RULE-SET,Porn,Porn
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
