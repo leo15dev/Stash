@@ -77,17 +77,15 @@ proxy-groups:
       - DIRECT
       
   - name: Porn
-#    type: select
-#    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
-    type: url-test
-    url: 'http://www.gstatic.com/generate_204'
+    type: select
+#    type: url-test
+#    url: 'http://www.gstatic.com/generate_204'
     interval: 300
-#    type: select
     icon: https://www.vhv.rs/dpng/d/523-5234025_18-plus-png-emblem-transparent-png.png
     use:
       - All
-#    proxies:
-#      - DIRECT
+    proxies:
+      - DIRECT
 
 
 rule-providers:
