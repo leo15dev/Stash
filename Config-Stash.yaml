@@ -2,7 +2,7 @@ mixed-port: 7890
 allow-lan: true
 bind-address: '*'
 mode: rule
-log-level: info
+log-level: silent
 ipv6: true
 external-controller: 127.0.0.1:9090
 
@@ -24,7 +24,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204
+      url: http://captive.apple.com
 
 proxies:
            
@@ -44,7 +44,7 @@ proxy-groups:
     proxies:
       - DIRECT 
       
-  - name: NETFLIX
+  - name: Netflix
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     use:
@@ -79,7 +79,7 @@ proxy-groups:
   - name: Porn
     type: select
 #    type: url-test
-#    url: 'http://www.gstatic.com/generate_204'
+#    url: 'http://captive.apple.com'
     interval: 300
     icon: https://www.vhv.rs/dpng/d/523-5234025_18-plus-png-emblem-transparent-png.png
     use:
@@ -126,7 +126,7 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,Netflix,NETFLIX
+  - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,Disney+
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Porn,Porn
