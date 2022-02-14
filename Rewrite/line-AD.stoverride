@@ -1,4 +1,7 @@
-# https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
+# Source code from https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
+name: Line 去廣告
+desc:  Line 去廣告
+
 http:
   mitm:
     - "a.line.me"
