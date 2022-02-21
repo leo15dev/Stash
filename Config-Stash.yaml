@@ -9,6 +9,10 @@ external-controller: 127.0.0.1:9090
 dns:
   enable: true                   
   ipv6: true
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - system # 使用 iOS 系统 DNS
   nameserver:
     - DOH1
     - DOH2
@@ -18,7 +22,8 @@ proxy-providers:
 #全部節點
   All:
     type: http
-    url: "https://api.v1.mk/sub?target=clash&url=訂閱連結&list=true&udp=true"
+#    url: "https://api.v1.mk/sub?target=clash&url=訂閱連結&list=true&udp=true"
+    url: "訂閱連結"
     interval: 3600
     path: ./all.yaml
     health-check:
@@ -142,3 +147,4 @@ rules:
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - IP-CIDR6,fd00::/8,DIRECT,no-resolve
   - GEOIP,TW,DIRECT
+  - GEOIP,CN,國外網站
