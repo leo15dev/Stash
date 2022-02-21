@@ -1,5 +1,5 @@
 name: Line 去廣告
-desc:  Line 去廣告
+desc: Line 去廣告, Source code from https://github.com/jkgtw/Surge
 
 http:
   mitm:
