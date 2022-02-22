@@ -119,14 +119,14 @@ rule-providers:
   Porn:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/leo15dev/Stash/main/rule/porn.yaml"
+    url: "https://leo15dev.github.io/Stash/rule/porn.yaml"
     path: ./ruleset/Porn.yaml
     interval: 86400
 
   PTT:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/leo15dev/Stash/main/rule/PTT.yaml"
+    url: "https://leo15dev.github.io/Stash/rule/PTT.yaml"
     path: ./ruleset/PTT.yaml
     interval: 86400
 
