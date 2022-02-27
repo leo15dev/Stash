@@ -1,0 +1,2 @@
+*.ptt.cc
+*.api.jpttapp.com
