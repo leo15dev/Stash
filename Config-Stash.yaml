@@ -115,20 +115,33 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Clash/App/social/Telegram.yaml"
     path: ./ruleset/Telegram.yaml
     interval: 86400
-
-  Porn:
-    type: http
-    behavior: classical
-    url: "https://leo15dev.github.io/Stash/rule/porn.yaml"
-    path: ./ruleset/Porn.yaml
+    
+  Porn-domain-text:
+    behavior: domain-text 
+    url: https://leo15dev.github.io/Stash/rule/Porn.txt
+    path: ./ruleset/Porn.txt
     interval: 86400
 
-  PTT:
-    type: http
-    behavior: classical
-    url: "https://leo15dev.github.io/Stash/rule/PTT.yaml"
-    path: ./ruleset/PTT.yaml
+  PTT-domain-text:
+    behavior: domain-text 
+    url: https://leo15dev.github.io/Stash/rule/PTT.txt
+    path: ./ruleset/PTT.txt
     interval: 86400
+    
+#Clash
+#  Porn:
+#    type: http
+#    behavior: classical
+#    url: "https://leo15dev.github.io/Stash/rule/porn.yaml"
+#    path: ./ruleset/Porn.yaml
+#    interval: 86400
+
+#  PTT:
+#    type: http
+#    behavior: classical
+#    url: "https://leo15dev.github.io/Stash/rule/PTT.yaml"
+#    path: ./ruleset/PTT.yaml
+#    interval: 86400
 
 rules:
   - RULE-SET,Netflix,Netflix
