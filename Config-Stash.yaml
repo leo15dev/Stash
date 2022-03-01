@@ -110,26 +110,21 @@ rule-providers:
     interval: 86400
     
   Telegram:
+    type: http
     behavior: ipcidr-text
     url: https://core.telegram.org/resources/cidr.txt
     path: ./ruleset/Telegram.txt
     interval: 86400   
-  
-#Clash  
-#  Telegram:
-#    type: http
-#    behavior: classical
-#    url: "https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Clash/App/social/Telegram.yaml"
-#    path: ./ruleset/Telegram.yaml
-#    interval: 86400
     
   Porn-domain-text:
+    type: http
     behavior: domain-text 
     url: https://leo15dev.github.io/Stash/rule/Porn.txt
     path: ./ruleset/Porn.txt
     interval: 86400
 
   PTT-domain-text:
+    type: http
     behavior: domain-text 
     url: https://leo15dev.github.io/Stash/rule/PTT.txt
     path: ./ruleset/PTT.txt
@@ -151,6 +146,7 @@ rule-providers:
 #    interval: 86400
 
   lan-cidr:
+    type: http
     behavior: ipcidr
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
     path: ./ruleset/lancidr.txt
