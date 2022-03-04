@@ -35,11 +35,14 @@ proxies:
            
 
 proxy-groups:
-  - name: 手動切換
+      
+  - name: Others
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     use:
-      - All        
+      - All
+    proxies:
+      - DIRECT
       
   - name: Telegram
     type: select
@@ -70,12 +73,12 @@ proxy-groups:
     icon: https://iamchucky.github.io/PttChrome/icon_512.png
     use:
       - All
-    proxies:
+    proxies:   
       - DIRECT
-
-  - name: 國外網站
+      
+  - name: China
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/383px-Flag_of_the_People%27s_Republic_of_China.svg.png
     use:
       - All
     proxies:
@@ -91,6 +94,15 @@ proxy-groups:
       - All
     proxies:
       - DIRECT
+      
+  - name: Cloudflare
+    type: select
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cloudflare_Logo.png/480px-Cloudflare_Logo.png
+    use:
+      - All
+    proxies:
+      - DIRECT
+
 
 
 rule-providers:
@@ -151,13 +163,31 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
     path: ./ruleset/lancidr.txt
     interval: 86400
+    
+  Cloudflare-v4cidr:
+    type: http
+    behavior: ipcidr-text
+    url: https://www.cloudflare.com/ips-v4
+    path: ./ruleset/Cloudflare-v4cidr.txt
+    interval: 86400
+
+  Cloudflare-v6cidr:
+    type: http
+    behavior: ipcidr-text
+    url: https://www.cloudflare.com/ips-v6
+    path: ./ruleset/Cloudflare-v6cidr.txt
+    interval: 86400
+
 
 rules:
   - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,Disney+
-  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,Porn-domain-text,Porn
   - RULE-SET,PTT-domain-text,PTT
+  - RULE-SET,Cloudflare-v4cidr,Cloudflare
+  - RULE-SET,Cloudflare-v6cidr,Cloudflare
   - RULE-SET,lan-cidr,DIRECT
   - GEOIP,TW,DIRECT
-  - GEOIP,CN,國外網站
+  - GEOIP,CN,China
+  - MATCH,Others
