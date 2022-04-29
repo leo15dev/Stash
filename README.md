@@ -1,6 +1,6 @@
 參考 
 
-https://github.com/STASH-NETWORKS-LIMITED/stash-example
+https://stash.wiki/
 
 https://github.com/Infatuation-Fei/rule
  
