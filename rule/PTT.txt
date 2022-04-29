@@ -1,3 +1,4 @@
 +.ptt.cc
 +.api.jpttapp.com
 +.beptt.cc
++.moptt.tw
