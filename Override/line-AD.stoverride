@@ -13,7 +13,7 @@ http:
     - "scdn.line-apps.com"
     - "sch.line.me"
     - "uts-front.line-apps.com"
-    - "static.line-scdn.net"
+   # - "static.line-scdn.net"
     - "nelo2-col.linecorp.com"
 
   rewrite:
