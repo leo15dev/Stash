@@ -7,7 +7,7 @@ http:
     - "w.line.me"
     - "buy.line.me"
     - "crs-event.line.me"
-    - "obs.line-scdn.net"
+    #- "obs.line-scdn.net"
     - "cix.line-apps.com"
     - "d.line-scdn.net"
     - "scdn.line-apps.com"
@@ -25,9 +25,9 @@ http:
     - ^https?:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/ - reject 
     - ^https?:\/\/buy\.line\.me\/api\/graphql\?variables - reject
     - ^https?:\/\/crs-event\.line\.me\/v\d\/imp - reject 
-    #- ^https?:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$ - reject 
-    #- ^https?:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$ - reject 
-    #- ^https?:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$ - reject 
+    - ^https?:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$ - reject 
+    - ^https?:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$ - reject 
+    - ^https?:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$ - reject 
     - ^https?:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png) - reject
     - ^https?:\/\/cix\.line-apps\.com\/R4\? - reject
     - ^https?:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json - reject
