@@ -7,7 +7,7 @@ http:
     - "w.line.me"
     - "buy.line.me"
     - "crs-event.line.me"
-    - "obs.line-scdn.net"
+   # - "obs.line-scdn.net"
     - "cix.line-apps.com"
     - "d.line-scdn.net"
     - "scdn.line-apps.com"
