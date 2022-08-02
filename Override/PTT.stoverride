@@ -1,8 +1,8 @@
-name: PTT 跳過年齡驗證
+name: PTT 跳過年齡驗證測試
 desc: PTT 跳過年齡驗證, Source code from https://github.com/Black-Magic-Lab/Surge/blob/master/modules/ptt.sgmodule
 
 http:
   mitm:
-    - "%APPEND% www.ptt.cc"
+    - "www.ptt.cc"
   rewrite:
-    - ^https?:\/\/www\.ptt\.cc request-add Cookie over18=1
+    - ^https?:\/\/www\.ptt\.cc request-add cookie over18=1
