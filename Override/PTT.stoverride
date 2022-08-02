@@ -4,5 +4,5 @@ desc: PTT 跳過年齡驗證, Source code from https://github.com/Black-Magic-La
 http:
   mitm:
     - "www.ptt.cc"
-  rewrite:
+  header-rewrite:
     - ^http://www.ptt.cc request-add cookies over18=1
