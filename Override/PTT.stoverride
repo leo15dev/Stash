@@ -5,4 +5,4 @@ http:
   mitm:
     - "www.ptt.cc"
   header-rewrite:
-    - ^http://www.ptt.cc request-add cookies over18=1
+    - ^https://www.ptt.cc request-add cookies over18=1
