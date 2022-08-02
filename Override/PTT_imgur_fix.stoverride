@@ -8,6 +8,6 @@ http:
     - "i.imgur.com"
     
   header-rewrite:
-    - ^https://imgur.com request-del Referer
-    - ^https://m.imgur.com request-del Referer
-    - ^https://i.imgur.com request-del Referer
+    - ^https://imgur.com request-del referer
+    - ^https://m.imgur.com request-del referer
+    - ^https://i.imgur.com request-del referer
