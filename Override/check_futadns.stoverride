@@ -3,7 +3,7 @@ desc: FutaDNS 檢查面板, Source code from https://github.com/Black-Magic-Lab/
 
 tiles:
   - name: FutaDNScheck
-    interval: 600
+    interval: 1
     title: FutaDNS 檢查面板
 
 script-providers:
