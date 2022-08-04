@@ -1,10 +1,11 @@
+name: FutaDNS 檢查面板
+desc: FutaDNS 檢查面板, Source code from https://github.com/Black-Magic-Lab/Surge/blob/master/modules/check_futadns.sgmodule
+
 tiles:
   - name: FutaDNScheck
     interval: 600
     title: FutaDNS 檢查面板
-    content: FutaDNS 設置檢查
-    icon: https://site.futa.gg/_assets/logo.1c3b2219.svg
-    backgroundColor: #663399
+
 script-providers:
   FutaDNScheck:
     url: https://kinta.ma/surge/scripts/check_futadns.js
