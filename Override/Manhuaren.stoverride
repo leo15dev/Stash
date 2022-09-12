@@ -1,0 +1,17 @@
+name: 漫畫人 去廣告
+desc: 漫畫人 去廣告, Source code from https://raw.githubusercontent.com/jimmyorz/Surge/master/Manhuaren.sgmodule
+
+http:
+  mitm:
+    - "angaapi.manhuaren.com"
+
+  rewrite:
+    - ^https?:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds|getMultiAds|getUpgradeInfo|getVendor|getUserLocation) - reject
+    - ^https?:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity - reject
+    - ^https?:\/\/mangaapi.manhuaren.com\/.+\/ad\/ - reject
+    - DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
+    - DOMAIN-SUFFIX,adsapi.manhuaren.com,REJECT
+    - DOMAIN-SUFFIX,videoapi.manhuaren.com,REJECT
+    - DOMAIN-SUFFIX,bi.manhuaren.com,REJECT
+    - DOMAIN-SUFFIX,euadsapi.manhuaren.com,REJECT
+    - DOMAIN-SUFFIX,applog.uc.cn,REJECT-TINYGIF
