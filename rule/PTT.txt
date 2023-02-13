@@ -2,3 +2,4 @@
 +.api.jpttapp.com
 +.beptt.cc
 +.moptt.tw
++.devptt.dev
