@@ -1,6 +1,6 @@
 payload:
-  - '.ptt.cc'
-  - '.api.jpttapp.com'
-  - '.beptt.cc'
-  - '.moptt.tw'
-  - '.devptt.dev'
+  - '+.ptt.cc'
+  - '+.api.jpttapp.com'
+  - '+.beptt.cc'
+  - '+.moptt.tw'
+  - '+.devptt.dev'
