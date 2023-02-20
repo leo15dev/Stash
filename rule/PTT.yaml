@@ -1,6 +1,6 @@
 payload:
-  - DOMAIN-SUFFIX,ptt.cc
-  - DOMAIN-SUFFIX,api.jpttapp.com
-  - DOMAIN-SUFFIX,beptt.cc
-  - DOMAIN-SUFFIX,moptt.tw
-  - DOMAIN-SUFFIX,devptt.dev
+  - '.ptt.cc'
+  - '.api.jpttapp.com'
+  - '.beptt.cc'
+  - '.moptt.tw'
+  - '.devptt.dev'
