@@ -35,7 +35,7 @@ http:
     - ^https?:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/ - reject 
     - ^https?:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/ - reject 
     - ^https?:\/\/sch\.line\.me\/api\/v\d\/ads$ - reject 
-    - ^https?:\/\/uts-front\.line-apps\.com\/event$ - reject 
+#    - ^https?:\/\/uts-front\.line-apps\.com\/event$ - reject 
     - ^https?:\/\/uts-front\.line-apps\.com\/settings$ - reject 
     - ^https?:\/\/static\.line-scdn\.net\/ad-sdk\/ - reject
     - ^https?:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
