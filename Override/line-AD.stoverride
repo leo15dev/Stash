@@ -16,7 +16,7 @@ http:
     - "static.line-scdn.net"
     - "nelo2-col.linecorp.com"
 #    - "gw.line.naver.jp"
-    - "legy.line-apps.com"
+#    - "legy.line-apps.com"
 
   rewrite:
     - ^https?:\/\/a\.line\.me\/er\/lads\/v\d\/ei\? - reject
@@ -42,5 +42,5 @@ http:
     - ^https?:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
 #    - ^https:\/\/obs\.line-scdn\.net\/0h.* - reject
 #    - ^https?:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$ - reject
-    - ^https:\/\/legy\.line-apps\.com\/ext\/lgfp\/lad\/v1$ - reject
-    - ^https:\/\/legy\.line-apps\.com\/tr\/event$ - reject
+#    - ^https:\/\/legy\.line-apps\.com\/ext\/lgfp\/lad\/v1$ - reject
+#    - ^https:\/\/legy\.line-apps\.com\/tr\/event$ - reject
