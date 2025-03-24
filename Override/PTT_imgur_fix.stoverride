@@ -6,6 +6,17 @@ http:
     - "ptt.cc"
     - "www.ptt.cc"
 
-[Script]
-ptt-imgur-fix.js = type=http-response,pattern=^https://www.ptt.cc/bbs/.*,requires-body=true,script-path=https://kinta.ma/surge/scripts/ptt_imgur_fix.js
+  script:
+    - match: https://www.ptt.cc/bbs/.*
+      name: ptt-imgur-fix.js
+      type: response 
+      require-body: true
+      timeout: 20
+      argument: ''
+      binary-mode: false
+      max-size: 1048576 # 1MB
  
+script-providers:
+  ptt-imgur-fix.js:
+    url: https://kinta.ma/surge/scripts/ptt_imgur_fix.js
+    interval: 86400
