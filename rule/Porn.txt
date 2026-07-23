@@ -91,3 +91,5 @@
 +.alive-video.com
 +.tapepops.com
 +.sendvid.com
++.vidmoly.me
++.vidmoly.biz
