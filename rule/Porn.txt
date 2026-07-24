@@ -93,3 +93,4 @@
 +.sendvid.com
 +.vidmoly.me
 +.vidmoly.biz
++.vmwesa.online
