@@ -1,6 +1,10 @@
 +.ptt.cc
-+.api.jpttapp.com
-+.beptt.cc
-+.moptt.tw
-+.devptt.dev
 +.ptt2.cc
++.devptt.dev
+#JPTT
++.api.jpttapp.com
+#BePTT
++.beptt.cc
++.beptt-ios.firebaseio.com
+#MoPTT
++.moptt.tw
