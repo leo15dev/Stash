@@ -1,0 +1,99 @@
+name: 'LINE-ADs'
+desc: |-
+  LINE 去廣告 + 遙測/追蹤/分析阻擋
+  Converted from Surge LINE-ADs.sgmodule
+  Original version: v20260904.02
+  Requires MitM
+author: |-
+  jkgtw
+homepage: 'https://github.com/jkgtw/Surge'
+category: 'AdBlock'
+date: '2026-09-04 16:00:00'
+version: '20260904.02'
+
+http:
+  mitm:
+    - 'a.line.me'
+    - 'gw.line.naver.jp'
+    - 'legy.line-apps.com'
+    - 'w.line.me'
+    - 'sch.line.me'
+    - 'crs-event.line.me'
+    - 'static.line-scdn.net'
+    - 'web-mmap-pay.line-apps.com'
+    - 'scdn.line-apps.com'
+    - 'cix.line-apps.com'
+
+  url-rewrite:
+    # ============================================================
+    # LINE Ads / Smart Channel
+    # ============================================================
+
+    # LINE Ads impression / event pixels
+    - '^https:\/\/a\.line\.me(?::443)?\/er\/lads\/v\d+\/ei(?:\?|$) - reject-img'
+    - '^https:\/\/a\.line\.me(?::443)?\/er\/(?:lass|ladg|lads)\/v\d+\/event\/image(?:\?|$) - reject-img'
+
+    # LINE Ads APIs
+    - '^https:\/\/a\.line\.me(?::443)?\/lass\/api\/v\d+\/ads(?:\?|$) - reject'
+    - '^https:\/\/a\.line\.me(?::443)?\/oa\/v\d+\/e(?:\?|$) - reject'
+    - '^https:\/\/a\.line\.me(?::443)?\/cs\/v\d+\/oa(?:\?|$) - reject'
+
+    # Legacy / compatibility ads gateways
+    - '^https:\/\/gw\.line\.naver\.jp(?::443)?\/ext\/lgfp\/lad\/v\d+(?:\?|$) - reject'
+    - '^https:\/\/gw\.line\.naver\.jp(?::443)?\/lass\/api\/v\d+\/ads(?:\?|$) - reject'
+
+    # Current LINE Ads / Smart Channel
+    - '^https:\/\/legy\.line-apps\.com(?::443)?\/ext\/lgfp\/lad\/v\d+(?:\?|$) - reject'
+    - '^https:\/\/legy\.line-apps\.com(?::443)?\/ext\/smartch\/banner\/sch\/v\d+(?:\?|$) - reject'
+
+    # Other explicit ad APIs
+    - '^https:\/\/w\.line\.me(?::443)?\/adp\/api\/ad\/v\d+\/ - reject'
+    - '^https:\/\/sch\.line\.me(?::443)?\/api\/v\d+\/ads(?:\?|$) - reject'
+
+    # Smart Channel ad media CDN
+    # Whole host is dedicated to ad media, so no MITM is required.
+    # Handled below by a DOMAIN rule instead.
+
+    # Home / GEB promotional banner media
+    # Whole host is dedicated to the relevant banner media.
+    # Handled below by a DOMAIN rule instead.
+
+    # LINE Web / LIFF Ads SDK
+    - '^https:\/\/static\.line-scdn\.net(?::443)?\/ad-sdk\/ - reject'
+
+    # LINE Pay / LIFF campaign banner
+    - '^https:\/\/web-mmap-pay\.line-apps\.com(?::443)?\/tw\/liff\/campaign\/v\d+\/aggregate\/ad\/banner\/ - reject'
+
+    # Legacy LINE event/banner assets
+    - '^https:\/\/scdn\.line-apps\.com(?::443)?\/lan\/image\/line\/bannerImageEvent\/ - reject'
+    - '^https:\/\/scdn\.line-apps\.com(?::443)?\/lan\/document\/pageEvent\/line\/ios\/ - reject'
+
+    # ============================================================
+    # Telemetry / Tracking / Analytics / Diagnostics
+    # ============================================================
+
+    # LINE generic event tracking
+    - '^https:\/\/gw\.line\.naver\.jp(?::443)?\/tr\/event(?:\?|$) - reject'
+    - '^https:\/\/legy\.line-apps\.com(?::443)?\/tr\/event(?:\?|$) - reject'
+
+    # Recommendation / content impression collector
+    - '^https:\/\/crs-event\.line\.me(?::443)?\/v\d+\/imp(?:\?|$) - reject'
+
+    # UTS analytics SDK
+    - '^https:\/\/static\.line-scdn\.net(?::443)?\/uts\/ - reject'
+
+    # CIX client-information endpoint
+    - '^https:\/\/cix\.line-apps\.com(?::443)?\/R\d+(?:\?|$) - reject'
+
+  rules:
+    # Smart Channel ad media CDN
+    - 'DOMAIN,ad.line-scdn.net,REJECT'
+
+    # Home / GEB promotional banner media
+    - 'DOMAIN,ec-bot-obs.line-scdn.net,REJECT'
+
+    # UTS analytics collector
+    - 'DOMAIN,uts-front.line-apps.com,REJECT'
+
+    # NELO2 diagnostics / log collector
+    - 'DOMAIN,nelo2-col.linecorp.com,REJECT'
