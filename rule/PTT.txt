@@ -8,3 +8,5 @@
 +.beptt-ios.firebaseio.com
 #MoPTT
 +.moptt.tw
+#CalicoPTT
++.calicoptt.cc
