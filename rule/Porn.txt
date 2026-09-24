@@ -95,3 +95,4 @@
 +.vidmoly.biz
 +.vmwesa.online
 +.tiktokcdn.com
++.acek-cdn.com
