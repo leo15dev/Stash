@@ -10,3 +10,5 @@
 +.moptt.tw
 #CalicoPTT
 +.calicoptt.cc
+#BananaPTT
++.banaptt.com
