@@ -1,0 +1,5 @@
++.line.me
++.gw.line.naver.jp
++.crs-event.line.me
++.line-scdn.net
++.line-apps.com
